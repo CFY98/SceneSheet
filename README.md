@@ -136,7 +136,6 @@ Recommended models by RAM tier:
 | 6GB | Gemma 2 2B It Q5_K_M | ~1.8GB |
 | 8GB+ | Llama 3.2 3B Instruct Q5_K_M | ~2.2GB |
 
-GPU acceleration supported. Falls back to CPU automatically if GPU is unavailable.
 ___
 
 ## 🖥️ GPU Acceleration
