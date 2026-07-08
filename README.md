@@ -68,7 +68,7 @@ The following fields are extracted:
 
 | Field | Source | Method |
 |---|---|---|
-| Script Title | First Page | Auto-extracted from filename |
+| Script Title | Filename | Auto-extracted |
 | Scene Number | Slugline | Auto-extracted if present, otherwise assigned sequentially |
 | Scene Heading | Slugline | Auto-extracted (full string) |
 | Characters | Character Cues + Action Lines | Auto-extracted |
