@@ -17,7 +17,7 @@ A script-breakdown generator which parses screenplays in the .pdf, .fdx, and .fo
 
 ## 🎬 Why This Exists
 
-Script breakdowns are typically done manually or via tools tied to specific screenwriting or workspace software, which can require cloud uploads of unreleased scripts and account signup as part of a subscription model. SceneSheet was built to explore a local-first alternative. It parses industry-standard script formats directly and using an on-device LLM for scene summarisation so nothing leaves the machine. No accounts, no cloud inference, no script data exposure, no internet connection needed. The intention is a one-time-payment licensing model rather than a subscription. It's as much an exercise in offline NLP/LLM pipeline design as it is a production tool.
+Script breakdowns are typically done manually or via tools tied to specific screenwriting or workspace software, which can require cloud uploads of unreleased scripts and account signup as part of a subscription model. SceneSheet was built to explore a local-first alternative. It parses industry-standard script formats directly and uses an on-device LLM for scene summarisation so nothing leaves the machine. No accounts, no cloud inference, no script data exposure, and no internet connection needed. The intention is a one-time-payment licensing model rather than a subscription. It's as much an exercise in offline NLP/LLM pipeline design as it is a production tool.
 
 ---
 
