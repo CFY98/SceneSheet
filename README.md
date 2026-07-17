@@ -6,39 +6,43 @@ A script-breakdown generator which parses screenplays in the .pdf, .fdx, and .fo
 
 ## 💫 Features
 
-- Works completely offline so data never leaves the user's machine.
+- LLM inferrence works completely offline so data never leaves the user's machine (an internet connection is required on first run to download the language model and WordNet data.
 - Supports .pdf, .fdx, and .fountain file formats.
-- CLI support for running SceneSheet via terminal commands.
+- Cross-platform desktop app (Tauri V2 + React) alongside CLI support for running SceneSheet via terminal commands.
 - NLP-based filtering via spaCy to reduce false-positives in character detection.
 - Scene-by-scene breakdown with AI-generated summaries.
-- Exportable as .pdf, .docx, .json, or .xlsx (work-in-progress).
+- Automated hardware detection (CUDA, Metal, SYCL, Vulkan) on first run for GPU-acclerated inference.
+- Exportable as .pdf, .docx, .json, or .xlsx.
 
 ---
 
 ## 🎬 Why This Exists
 
-Script breakdowns are typically done manually or via tools tied to specific screenwriting or workspace software, which can require cloud uploads of unreleased scripts and account signup as part of a subscription model. SceneSheet was built to explore a local-first alternative. It parses industry-standard script formats directly and uses an on-device LLM for scene summarisation so nothing leaves the machine. No accounts, no cloud inference, no script data exposure, and no internet connection needed. The intention is a one-time-payment licensing model rather than a subscription. It's as much an exercise in offline NLP/LLM pipeline design as it is a production tool.
+Script breakdowns are typically done manually or via tools tied to specific screenwriting or workspace software, which can require cloud uploads of unreleased scripts and account signup as part of a subscription model. SceneSheet was built to explore a local-first alternative. It parses industry-standard script formats directly and uses an on-device LLM for scene summarisation so nothing leaves the machine. No accounts, no cloud inference, no script data exposure. Note that an internet connection is required on the first run to download the language model and WordNet data. After the initial setup, parsing and scene summarisations run fully offline. The intention is a one-time-payment licensing model rather than a subscription. It's as much an exercise in offline NLP/LLM pipeline design as it is a production tool.
 
 ---
 
 ## 💡 Philosophy
 
-1) AI is not used for creative or editorial judgement. The purpose of the app is to generate a summarisation for each scene in the script.
+1) AI is not used for creative or editorial judgement. The purpose of the app is to generate a summarisation of what happens in each scene in the script.
 2) Since LLM inferrence is performed locally, the scripts never leave the user's machine and are not used to train AI models.
 3) This tool is not affiliated with any production company, broadcaster, or screenplay software company.
 
 ---
 
-## 🚧 Project Status
+## 🚧 Project Status (Demo)
+- [x] GPU detection
 - [x] .fdx parsing (XML-based extraction)
 - [x] .fountain parsing (markup-based extraction)
 - [x] .pdf parsing (margin-based inference)
 - [x] spaCy-based character detection filtering
+- [x] WordNet semantic validation layer for wardrobe and props classification
 - [x] Local LLM scene summarization (llama-cpp-python)
 - [x] DOCX export
 - [x] PDF export
 - [x] JSON export
-- [ ] XLSX export
+- [x] XLSX export
+- [x] Frontend (React)
 - [ ] Tauri desktop packaging
 
 ---
@@ -89,7 +93,7 @@ Input (.fdx / .pdf / .fountain)
         ↓
 Backend Loop (extension validation + routing)
         ↓
-Parser Logic (structured scene extraction with regex and spaCy)
+Parser Logic (structured scene extraction with regex, WordNet, and spaCy)
         ↓
 Llama API Call (local, via llama-cpp-python)
         ↓
@@ -97,7 +101,7 @@ Compile Output
         ↓
 Output Generation
         ↓
-Format? → DOCX (python-docx) / PDF (ReportLab) / JSON / XLSX (openpyxl) - work in progress
+Format? → DOCX (python-docx) / PDF (ReportLab) / JSON / XLSX (openpyxl)
         ↓
 Local file download
 
@@ -112,13 +116,15 @@ Local file download
 - **xml.etree.ElementTree** - .fdx parsing (built-in)
 - **re** - .fountain parsing and filter patterns (built-in)
 - **spaCy** - NLP-based filtering of false positives in character detection
+- **WordNet** - Semantic filtering of object detection to reduce false positives for wardrobe and prop items
 - **llama-cpp-python** - local LLM inference
 - **python-docx** - .docx generation
 - **ReportLab** - .pdf generation
 - **json** - .json generation
 - **openpyxl** - .xlsx generation
 - **Tauri** - Desktop wrapper
-- **SQLite** - Tracks job queue and processing status
+- **React** - Desktop app frontend (settings and main interface)
+- **SQLite** - Shared connection powering job queue/status tracking, and peristent storage of parsed data and summarisations
 
 ---
 
@@ -126,7 +132,7 @@ Local file download
 
 Uses `llama-cpp-python` for on-device inference. No cloud API required.
 
-**Current test model:** `Llama-3.2-3B-Instruct-Q5_K_M.gguf` (Bartowski)
+**Current test model:** `Gemma 2 2B It Q5_K_M.gguf` (Bartowski)
 
 Recommended models by RAM tier:
 
@@ -148,7 +154,7 @@ ___
 
 - Ionic for Android
 - Batch processing
-- Persist parsed results to allow resumtion from point of failure
+- Resumption from point of failure
 
 ## ⚠️  Known Limitations
 
