@@ -11,11 +11,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
   
 ## v0.1.2 - Database Implementation
 ### Added
-- Implemented a robust database sytem for parsing and summarising scences, ensuring data integrity and long-term storage.
+- Implemented a robust database system for parsing and summarising scenes, ensuring data integrity and long-term storage.
 - Introduced background data cleanup policies to optimise storage efficiency.
 
 ### Changed
-- Enhanced data integrity via a centraalised database connection to resolve concurrency issues, ensuring thread-safe operations during high-load processing.
+- Enhanced data integrity via a centralised database connection to resolve concurrency issues, ensuring thread-safe operations during high-load processing.
 - Optimised export pipelines by migrating in-memory processing to relational database queries.
 - Shifted heavy parsing tasks to persistent storage, significantly reducing RAM usage during long-running operations. 
 
@@ -50,4 +50,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
 - 
 
 ### Improved
-- Transitioned from DOM-based XML parsing to stream-based iteration `iterparse`, allowing the application to process large production scripts with minimal memory consumption.
+- Transitioned from DOM-based XML parsing to stream-based iteration, allowing the application to process large production scripts with minimal memory consumption.
