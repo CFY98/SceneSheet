@@ -6,7 +6,7 @@ A script-breakdown generator which parses screenplays in the .pdf, .fdx, and .fo
 
 ## 💫 Features
 
-- LLM inferrence works completely offline so data never leaves the user's machine (an internet connection is required on first run to download the language model and WordNet data.
+- LLM inferrence works completely offline so data never leaves the user's machine (an internet connection is required on first run to download the language model and WordNet data).
 - Supports .pdf, .fdx, and .fountain file formats.
 - Cross-platform desktop app (Tauri V2 + React) alongside CLI support for running SceneSheet via terminal commands.
 - NLP-based filtering via spaCy to reduce false-positives in character detection.
@@ -132,7 +132,7 @@ Local file download
 
 ## 🤖 Local AI model
 
-Uses `llama-cpp-python` for on-device inference. No cloud API required.
+Uses `llama-cpp-python` for on-device inferrence. No cloud API required.
 
 **Current test model:** `Gemma 2 2B It Q5_K_M.gguf` (Bartowski)
 
