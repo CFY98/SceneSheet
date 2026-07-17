@@ -23,7 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
 - Decoupled job tracking from persistent storage layer, improving system responsiveness and stablity.
 
 ### Fixed 
-- Resolved thread-contention erros in the database layer using advanced locking and timeout strategies to ensure 100% stability.
+- Resolved thread-contention errors in the database layer using advanced locking and timeout strategies to ensure 100% stability.
 
 ## v0.1.1 - Frontend UI/UX Integration
 ### Added
