@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities.
 
-## v0.1.4 - Demo Preparation
+## [Unreleased] (v0.1.4)
 ### Added
 - Change models directly via the CLI, with automatic fallback checks against the saved config settings.
 - Standardised status cards across model management and downloads for clearer setup progress.
@@ -25,7 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
 ### Removed
 - Removed manual GPU acceleration option to fully rely on the auto-profiling of GPU.
 
-## v0.1.3 - Setup Wizard Implementation
+## v0.1.3 - 2026-07-17
 ### Added
 - Streamlined first-time application setup via an interactive setup wizard.
 - New menu option to download supported Hugging Face LLMs.
@@ -52,7 +52,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
 ### Fixed 
 - Resolved thread-contention errors in the database layer using explicit lock timeouts.
 
-## v0.1.1 - Frontend UI/UX Integration
+## v0.1.1 - 2026-07-11
 ### Added
 - Integrated desktop UI wrapper, enabling a native experience across Windows, MacOS, and Linux.
 - Automated system profiling to detect and configure GPU-accelerated computing (CUDA, Metal, SYCL, Vulkan) on first-run.
@@ -66,7 +66,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
 - Implemented strict schema validation for network requests.
 - Added sophisticated process management to handle job cancellations and completions gracefully, preventing "hanging" tasks.
 
-## v0.1.0 - Core Engine & NLP Pipeline
+## v0.1.0 - 2026-06-19
 ### Added
 - Built low-memory streaming parsers for FDX, PDF, and Fountain script formats.
 - Implemented an NLP-driven entity extraction system to identify and track characters and props across complex document structures.
