@@ -43,6 +43,7 @@ Script breakdowns are typically done manually or via tools tied to specific scre
 - [x] JSON export
 - [x] XLSX export
 - [x] Frontend (React)
+- [x] Setup Wizard
 - [ ] Tauri desktop packaging
 
 See [Changelog](https://github.com/CFY98/SceneSheet/blob/main/CHANGELOG.md) for more details
