@@ -15,16 +15,16 @@ Types of changes:
 ### Added
 - Change models directly via the CLI, with automatic fallback checks against the saved config settings.
 - Standardised status cards across model management and downloads for clearer setup progress.
-- Enhanced location parsing in scrip sluglines for better recognition of time-of-day indicators.
+- Enhanced location parsing in script sluglines for better recognition of time-of-day indicators.
 
 ### Changed
 - Caching and global state reuse for WordNet and location look-ups to speed-up repeated queries.
-- Optimised model initialisation so LLMs load in the background smoothly before parsing and summarisations begins.
-- Implemented file locking to prevent data corruption or conflicts in case of multiple app instances are opened simultaneously.
-- Destination flag for output has been updated to better conform with CLI standards
+- Optimised model initialisation so LLMs load in the background smoothly before parsing and summary generation begins.
+- Implemented file locking to prevent data corruption or conflicts when multiple app instances are opened simultaneously.
+- Destination flag for output has been updated to better conform to CLI standards
 
 ### Removed
-- Removed manual GPU prompting option to fully rely on the automatic process.
+- Removed manual GPU acceleration option to fully rely on the auto-profiling of GPU.
 
 ## v0.1.3 - Setup Wizard Implementation
 ### Added
@@ -33,7 +33,7 @@ Types of changes:
 - Immediate UI validation to choose export format selector during first run setup.
 
 ### Changed
-- GPU and CPU hardware detection is now completely automatic, removing setup friction for less tech-savvy users.
+- Automatic GPU and CPU hardware detection is now default, removing setup friction for less tech-savvy users.
 - Unified house styles and layout rules across setup and configuration screens.
 
 ### Fixed
@@ -51,7 +51,7 @@ Types of changes:
 - Decoupled job tracking from persistent storage layer, improving system responsiveness and stability.
 
 ### Fixed 
-- Resolved thread-contention errors in the database layer using advanced locking and timeout strategies to ensure 100% stability.
+- Resolved thread-contention errors in the database layer using explicit lock timeouts.
 
 ## v0.1.1 - Frontend UI/UX Integration
 ### Added
@@ -64,14 +64,15 @@ Types of changes:
 - Migrated core PDF extraction to a high performance, license-compliant engine, improving document parsing accuracy and order preservation.
 - Refactored the core pipeline to discrete, class-based modules, significantly improving maintainability and testing.
 - Lazy-loading for heavyweight third-party dependencies, reducing initial application boot time to near-instantaneous.
-- Leveraged advanced data modelling for network communications, minimising memory overhead.
-- Added sophisiticated process management to handle job cancellations and completions gracefully, preventing "hanging" tasks.
+- Implemented strict schema validation for network requests.
+- Added sophisticated process management to handle job cancellations and completions gracefully, preventing "hanging" tasks.
 
 ## v0.1.0 - Core Engine & NLP Pipeline
 ### Added
-- Built high-performance parsers for FDX, PDF, and Fountain script formats with low-memory streaming strategies.
+- Built low-memory streaming parsers for FDX, PDF, and Fountain script formats.
 - Implemented an NLP-driven entity extraction system to identify and track characters and props across complex document structures.
 - Integrated automated model discovery and downloading via Hugging Face.
+- Auto-profiling hardware alongside manual selection as GPU acceleration setup options.
 - Developed export engines for DOCX and PDF, enabling professional-grade report generation.
   
 ### Changed
