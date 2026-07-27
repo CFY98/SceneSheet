@@ -21,7 +21,7 @@ Types of changes:
 - Caching and global state reuse for WordNet and location look-ups to speed-up repeated queries.
 - Optimised model initialisation so LLMs load in the background smoothly before parsing and summary generation begins.
 - Implemented file locking to prevent data corruption or conflicts when multiple app instances are opened simultaneously.
-- Destination flag for output has been updated to better conform to CLI standards
+- Destination flag for output has been updated to better conform to CLI standards.
 
 ### Removed
 - Removed manual GPU acceleration option to fully rely on the auto-profiling of GPU.
@@ -37,7 +37,7 @@ Types of changes:
 - Unified house styles and layout rules across setup and configuration screens.
 
 ### Fixed
-- Synchronised initial setup states between the desktop app and local server setup
+- Synchronised initial setup states between the desktop app and local server setup.
   
 ## v0.1.2 - Database Implementation
 ### Added
