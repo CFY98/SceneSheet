@@ -3,7 +3,6 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
 
-Types of changes:
 - `Added` for new features.
 - `Changed` for changes in existing functionality.
 - `Deprecated` for soon-to-be removed features.
@@ -72,7 +71,7 @@ Types of changes:
 - Built low-memory streaming parsers for FDX, PDF, and Fountain script formats.
 - Implemented an NLP-driven entity extraction system to identify and track characters and props across complex document structures.
 - Integrated automated model discovery and downloading via Hugging Face.
-- Auto-profiling hardware alongside manual selection as GPU acceleration setup options.
+- Automated GPU profiling alongside a manual setup fallback.
 - Developed export engines for DOCX and PDF, enabling professional-grade report generation.
   
 ### Changed
