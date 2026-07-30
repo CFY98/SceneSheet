@@ -37,6 +37,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/):
 
 ### Fixed
 - Synchronised initial setup states between the desktop app and local server setup.
+- File-locking for safe process synchronisation across CLI and desktop app instances.
+- Cancellations check job status from cache alongside cancel tokens to allow for job queuing between app instances.
   
 ## v0.1.2 - 2026-07-17 - Database Implementation
 ### Added
